@@ -1,0 +1,44 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.scss";
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-size: 500% 500% !important;
+    -webkit-animation: Gradient 25s ease infinite;
+    -moz-animation: Gradient 25s ease infinite;
+    animation: Gradient 25s ease infinite !important;
+  }
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(310deg, #8CA6DB, #97d9e1, #FFAFBD, #ffd194, #FF6B6B, #556270);
+  background-size: 1000% 1000%;
+
+  -webkit-animation: Gradient 50s ease infinite;
+  -moz-animation: Gradient 50s ease infinite;
+  animation: Gradient 50s ease infinite;
+
+  @-webkit-keyframes Gradient {
+      0%{background-position:0% 52%}
+      50%{background-position:100% 49%}
+      100%{background-position:0% 52%}
+  }
+  @-moz-keyframes Gradient {
+      0%{background-position:0% 52%}
+      50%{background-position:100% 49%}
+      100%{background-position:0% 52%}
+  }
+  @keyframes Gradient {
+      0%{background-position:0% 52%}
+      50%{background-position:100% 49%}
+      100%{background-position:0% 52%}
+  }
+}
+
+.btn-indigo {
+  border-radius: 10px !important;
+}

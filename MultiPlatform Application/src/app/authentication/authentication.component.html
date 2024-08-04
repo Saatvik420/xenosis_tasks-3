@@ -1,0 +1,39 @@
+<div id="logo">
+  &#123;canvass&#125;
+</div>
+<div *ngIf="login" id="login" class="card bg-light mb-3">
+  <div class="card-header">Sign In</div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email" #email aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password" #password placeholder="Password">
+      </div>
+      <button (click)="loginEmail(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign In</button>
+      <button (click)="motherfuckerOut()" class="btn btn-blue-grey waves-light">Sign up</button>
+      <div (click)="loginGoogle(); email.value=''; password.value='';" id="google_btn"></div>
+    </form>
+  </div>
+</div>
+<div *ngIf="!login" id="login" class="card bg-light mb-3">
+  <div class="card-header">Sign Up</div>
+  <div class="card-body">
+    <form>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" #email aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" #password placeholder="Password">
+      </div>
+      <span (click)="motherfuckerIn()" class="btn btn-blue-grey waves-light">Sign In</span>
+      <button (click)="signUp(email.value, password.value); email.value=''; password.value='';" class="btn btn-mdb-color waves-light">Sign Up</button>
+    </form>
+  </div>
+</div>

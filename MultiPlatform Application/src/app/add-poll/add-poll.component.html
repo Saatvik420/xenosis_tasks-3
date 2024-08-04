@@ -1,0 +1,48 @@
+<app-topbar></app-topbar>
+<!-- Main -->
+<div id="content">
+  <div *ngIf="user">
+    <div class="card add">
+      <div class="card-body">
+        <form>
+          <p class="h5 text-center mb-4">Create Canvass</p>
+
+          <div class="md-form">
+              <i class="fa fa-question prefix grey-text"></i>
+              <input type="text" id="form3" class="form-control" mdbActive #question>
+              <label for="form3">Question</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-check-square-o prefix grey-text"></i>
+              <input type="text" id="form2" class="form-control" mdbActive #choice1>
+              <label for="form2">Choice 1</label>
+          </div>
+
+          <div class="md-form" style="margin-left: 40px;">
+              <i class="fa fa-picture-o prefix grey-text"></i>
+              <input type="text" id="form32" class="form-control" mdbActive #choice1img>
+              <label for="form34">Image Link for Choice 1</label>
+          </div>
+
+          <div class="md-form">
+              <i class="fa fa-check-square-o prefix grey-text"></i>
+              <input type="text" id="form32" class="form-control" mdbActive #choice2>
+              <label for="form34">Choice 2</label>
+          </div>
+
+          <div class="md-form" style="margin-left: 40px;">
+              <i class="fa fa-picture-o prefix grey-text"></i>
+              <input type="text" id="form32" class="form-control" mdbActive #choice2img>
+              <label for="form34">Image Link for Choice 2</label>
+          </div>
+
+          <div class="text-center">
+              <button (click)="submitForm(question.value, choice1.value, choice1img.value, choice2.value, choice2img.value); question.value=''; choice1.value=''; choice1img.value=''; choice2.value=''; choice2img.value='';" class="btn btn-outline-secondary waves-light" mdbRippleRadius>ASK<i class="fa fa-rocket ml-1"></i></button>
+          </div>
+
+      </form>
+      </div>
+    </div>
+  </div>
+</div>
